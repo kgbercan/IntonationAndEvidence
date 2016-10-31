@@ -14,7 +14,7 @@ palette
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-left:auto;
   margin-right:auto;
   width:950px;
@@ -123,6 +123,7 @@ body{
 #main h2{
   font-size:22pt;
 }
+
 #main a.unformlink{
   text-decoration:none;
   color:#269793;
@@ -142,6 +143,7 @@ body{
 #main a{
   color:black;
 }
+
 #main a:visited{
   color:black;
 }
@@ -201,3 +203,18 @@ body{
   padding-bottom:3px;
 }
 
+p{  
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.05em;
+}
+
+h1, h2, h3, h4{
+  font-weight: bold;
+}
+
+.code {
+  font-family: 'Roboto Mono', monospace;
+  padding: .3em;
+  background-color: gainsboro;
+  color:#0B486B;
+}
