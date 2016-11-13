@@ -5,7 +5,7 @@ palette
 #A8DBA8
 #79BD9A
 #3B8686
-#0B486B 
+#0B486B
 */
 
 *{
@@ -88,7 +88,7 @@ body{
   /*
   background-color:#cc2266;
   color:white;*/
-  
+
 }
 
 #nav a.current{
@@ -102,7 +102,7 @@ body{
   padding:30px;
   padding-top:0px;
 }
-#main h1, h2,h3{  
+#main h1, h2,h3{
   font-family: 'Roboto', sans-serif;
   margin-left:-30px;
   margin-right:-30px;
@@ -152,7 +152,7 @@ body{
   width:65%;
  float: right;
     clear: none;
-  
+
     padding-right: 5%;
 }
 
@@ -203,7 +203,7 @@ body{
   padding-bottom:3px;
 }
 
-p{  
+p{
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.05em;
 }
