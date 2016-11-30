@@ -47,9 +47,7 @@
 				<a href="#w7">Week 7</a>
 				<a href="#w8">Week 8</a>
 				<a href="#w9">Week 9</a>
-				<!--
 				<a href="#w10">Week 10</a>
-				-->
 			</div>
 
 			<!--
@@ -199,22 +197,86 @@
 
 			<br/>
 
-									<!--
 			<h2><a class="unformlink" name="w10" id="w10">Week 10</a></h2>
 			<br/>
-			<p>This past weekend we held the Strong Women Strong Girls "IT/CS Coding" Class. We demoed a rough version of our Scratch "What is a Variable?" and "If/Else" games. I think we gathered a lot of experience from this event on how to handle children and how much they can handle. They were from 3rd to 6th grade. For the upcoming week we have decided to begin working on IRB forms and to get to our timeline goals for the month, which is primarily find a reliable pool of kids to test the games on in the Spring.</p>
+			<p>I am very close to installing Festival, having found some forums that pointed me in the right direction. I am writing down my steps as I go for Festival-hopefuls in the future, but since I have not successfully installed it yet, I will post it next week.</p>
+
+			<p>I follow the Festival INSTALL files and the manual from the Festival website, but since those are out of date and convoluted for my purposes, it's been helpful to google my errors and see how others have been able to solve the same issues.</p>
+
 			<br/>
 
 			<h2><a class="unformlink" name="w11" id="w11">Week 11</a></h2>
 			<br/>
-			<p>No in person meeting this week due to sickness, but had an email chain instead. We discussed the future of our project for next semester and plan to discuss more next week.</p>
+			<p>I looked for more solutions to install Fesitval, and I think I need to change my PATH in order to make it work. One of my classmates accidentally deleted her PATH variable trying to update it once, so I am seeking help from a professor in my department before moving forward.</p>
 			<br/>
 
 			<h2><a class="unformlink" name="w12" id="w12">Week 12</a></h2>
 			<br/>
-			<p>We discussed when our meeting times will be for next semester. We also plan on working on our Tapia proposal/poster over winter break as well as coding projects. We also need to figure out whether or not the IRB process is necessary for our project.</p>
-			<br/>
+			<p>I finally was able to install Fesitval! Here are the steps:</p>
+			<p>
+				<ol>
+					<li>Go to <a href="http://www.cstr.ed.ac.uk/projects/festival/download.html">downloads</a> on Festival's website</li>
+					<li>Make sure you meet the system requirements
+						<ul>
+							<li>I'm running on a Mac, which is a unix-like environment</li>
+							<li>I have a C++ compiler, which I know because when I type <span class="code">gcc</span> into a terminal window, it does not output "command not found"</li>
+							<li>But I still need GNU Make
+								<ol>
+									<li>Go <a href="https://www.gnu.org/software/make/">here</a> and scroll to the "Downloading Make" section</li>
+									<li>Click on the main GNU FTP server and download the second to last file, version 4.2.</li>
+									<li>Unpack this folder in your home directory **you can double click on the .tar.gz file to unpack it, but to make sure nothing goes wrong, I used command-line as walked through <a href="http://info.eps.surrey.ac.uk/FAQ/unpack.html">here</a>.</li>
+									<li>Type the following into the command-line:
+										<br>
+										<span class="code">cd make-4.2/</span>
+										<br>
+										<span class="code">./configure</span>
+										<br>
+										<span class="code">make</span>
+										<br>
+										<span class="code">make install</span>
+										<br><span class="code">make clean</span>
+										<br>
+										**these instructions and more detail on installing GNU Make can be found in text file INSTALL
+									</li>
+								</ol>
+							</li>
+						</ul>
+					</li>
+					<li>Go to the <a href="http://festvox.org/festival/">US Festival site</a> and click 'downloads' to be taken to an FTP index.
+						<ol>
+							<li>In your home directory, make a folder to hold all your Festival downloads. I called mine `fest.`</li>
+							<li>Download the following from the index above, and move them into `fest`, but be careful not to unpack until the next step.
+								<ul>
+									<li>festival-2.4-release.tar.gz</li>
+									<li>speech_tools-2.4-release.tar.gz</li>
+									<li>festlex_CMU.tar.gz</li>
+									<li>festlex_OALD.tar.gz</li>
+									<li>festlex_POSLEX.tar.gz</li>
+									<li>From the `voices` folder: festvox_kallpc16k.tar.gz and festvox_rablpc16k.tar.gz</li>
+									<li>From <a href="http://festvox.org/download.html">festvox</a>: festvox-2.7.0-release.tar.gz</li>
+									<li>The documentation says to download a festdoc file, too, but I can't find it so we'll skip it.</li>
+								</ul>
+							</li>
+							<li>Unpack them all, using the method we used for GNU Make and <span class="important">making sure festival-2.4-release is done first</span>.</li>
+							<li>Open speech_tools/INSTALL and follow what it says:
+								<ol>
+									<li>cd into speech_tools/ and type <span class="code">./configure</span>.</li>
+									<li>Type the command <span class="code">gnumake</span>. This takes a long time. Also, the documentation says you may need to use <span class="code">gmake</span> if <span class="code">gnumake</span> doesn't work.</li>
+									<li>Type the command <span class="code">gnumake test</span>. Again, you may need to use <span class="code">gmake test</span>. At the end of the output, you get "Test OK" if it was installed correctly.</li>
+									<li>Add speech_tolls/bin to your path. I did not do this myself, but I watched a professor do it, and it seems simple to accomplish. If you are nervous about doing this on your own, seek help!!!</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+					<li>cd into festival/</li>
+					<li>Type <span class="code">gnumake</span></li>
+					<li>Type <span class="code">gnumake test</span></li>
+					<li>This is the end! You should be able to run festival by typing <span class="code">src/main/festival</span> in this directory.</li>
+				</ol>
+			</p>
 
+			<br/>
+<!--
 			<h2><a class="unformlink" name="w13" id="w13">Week 13</a></h2>
 			<br/>
 			<p>While not actually a meeting, this will be a summary of what was done over winter break.  We discussed the Tapia proposal that needs to be written for the upcoming month. Jazzmine will be the designated presenter as she will still be an undergrad during the time of the conference. We split up the proposal writing between the three of us. I will be writing the approach and results and contribution, as well as editing for overall flow and converting it to LaTex.</p>
