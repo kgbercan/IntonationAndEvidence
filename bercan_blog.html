@@ -66,9 +66,9 @@
 				<a href="#w21">Week 21</a>
 				<a href="#w22">Week 22</a>
 				<a href="#w23">Week 23</a>
-								<!--
 				<a href="#w24">Week 24</a>
 				<a href="#w25">Week 25</a>
+								<!--
 				<a href="#w26">Week 26</a>
 				-->
 			</div>
@@ -347,20 +347,34 @@
 
 			<br/>
 
-			<!--
-
 			<h2><a class="unformlink" name="w25" id="w25">Week 25: 2/19/17</a></h2>
 			<br/>
-			<p></p>
+			<p>This week I attempted to fix my problem installing Prosodylab-Aligner. As mentioned last week, I was getting an error about a missing symbol tied to an outdated version of xcode, the Apple IDE. I don't know what a symbol is and I don't know why I needed that specific "symbol" to carry out my installation.</p>
+
+			<p>I did the only thing I know how to do--I copy and pasted the error message into Google, and I found that many people who got the error were trying to install Ruby. An example is <a href="https://github.com/rvm/rvm/issues/3744">this thread</a>. The fix for these developers was simply to update "developer tools" on xcode, but my version claimed to be updated. After trying to update xcode and then uninstall and re-install it countless times, I decided to try to download Ruby and see if I could find the problem there.</p>
+
+			<p>I used Homebrew to install Ruby, and after getting errors with that, I was led to believe there was a problem with Homebrew. Investigating that, I ended up deleting a bunch of files that <span class="code">brew doctor</span> brought to my attention. I don't think that really did anything, but it did help me clear non-brew installed Python files (3 versions of Python!!!) out of my system (maybe, probably). So I picked up where I left off on my Prosodylab-Aligner installation, but I got the same error message.</p>
+
+			<p>I found an email thread which suggested downloading the developer tools from xcode that I needed from the <a href="https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2Fmore%2F&rv=1">Apple downloads site</a>. I found the most recent developer tools package, downloaded, and tried to run it, but got an error that I needed the most recent version of OS X, a version of Sierra. That was a breakthrough. I had assumed I had to most recent OS because my Mac is very annoying about updating, but when I went to the App Store, I found that I could install the new Sierra. That took close to an hour to download and install, but when I logged back on, I was able to install Prosodylab-Aligner!...Almost.</p>
+
+			<p>I started having a problem with pip, which is a tool for installing Python packages. After running <span class="code">pip install --upgrade pip</span> I found that I did have the most recent version, so I looked at the output from the command that gave me a problem, <span class="code">pip3 install -r requirements.txt</span>. Recall: these Prosodylab-Aligner instructions for Mac and Linux are <a href="https://github.com/prosodylab/Prosodylab-Aligner">here</a>. There seemed to be a problem building something called Scipy, so per <a href="http://stackoverflow.com/questions/26575587/cant-install-scipy-through-pip">StackOverflow</a>, I tried <span class="code">sudo pip3 install scipy</span> to no avail--my terminal yelled at me that I didn't have permissions for this. I tried another suggestion, <span class="code">brew install gcc</span>. That took approximately 100 years.</p>
+
+			<p>Since that multi-hour process, I haven't made more progress on the installation.</p>
+
 			<br/>
 
-			<h2><a class="unformlink" name="w26" id="w26">Week 26</a></h2>
+<!-- -->
+			<h2><a class="unformlink" name="w26" id="w26">Week 26: 2/26/17</a></h2>
 			<br/>
-			<p>This week was the UGS! I ran the analysis on all of our collected participant data. Not as big of an <i>n</i> as I would have liked (11 total participants), but this is to be expected as other studies may have already poached some of our possible participants. The panel went very well, with me explaining the analysis that I did. We may also have a possible future group to work with over the summer! I am excited to see how that pans out.</p>
+			<p>At last, my installation of Prosodylab-Aligner works! I struggled with it a bit more until I took a look at a file in its directory called "requirements.txt." I double checked to make sure I had what it required and realized I didn't have numpy. <a href="https://penandpants.com/2012/02/24/install-python/">This link</a> was helpful for installing the packages I needed. Then I went back and tried Prosodylab-Aligner again.</p>
+
+			<p>The way to use it once you've installed it, <span class="code">cd</span> into its directory. Then, you can type something like <span class="code">python3 -m aligner -a /Users/Karina/Documents/CREU/Spring2017_recordings/test</span> where /Users/Karina/Documents/CREU/Spring2017_recordings/test is the directory of your own files to be aligned, including the .wav file and the .lab file, which is just a text file (in all caps) of the words said.</p>
+
+			<p>If you get something about a file named OOV.txt being created, that just means the words you used in your .lab file don't exist in Prosodylab-aligner's dictionary. This is what happened to me. I actually think that was the only problem, and that I suffered with all the rest I wrote about because I didn't really look into that. Come to find out, your .lab file needs to be in all uppercase, and even contractions (like "it's") can't be used.</p>
+
+			<p>In any case, it works! See here: <img src="/Users/Karina/Documents/CREU/IntonationAndEvidence/images/blog/prosodylab.png" alt="Screenshot of TextGrid created by Prosodylab-Aligner" style="width:900px;"></p>
 			<br/>
-
-		-->
-
+<!-- -->
 		<a href="#">Back to the top</a>
 		<br/>
 		<div id="nothing" style="clear:both;"></div>
