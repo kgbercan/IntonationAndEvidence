@@ -26,14 +26,14 @@
 
 	<div id="main">
 		<h2>Karina Bercan's Blog</h2>
-		<br/>
+		<br>
 		<p>Check this page for weekly summaries of my individual work. My colleagues' pages are linked right below, as well as a link back to the team blog.</p>
 
 		<h4><a href="blog.html">Project Blog</a> |
 			<a href="chicklis_blog.html">Emily's Blog</a> |
 			<a href="harland_blog.html">Sara's Blog</a></h4>
 
-			<br/>
+			<br>
 
 			<h3><a class="unformlink" name="toc" id="toc">Table of Contents</a></h3>
 
@@ -68,25 +68,25 @@
 				<a href="#w23">Week 23</a>
 				<a href="#w24">Week 24</a>
 				<a href="#w25">Week 25</a>
-								<!--
 				<a href="#w26">Week 26</a>
-				-->
+				<a href="#w26">Week 27</a>
+				<a href="#w26">Week 28</a>
 			</div>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w1" id="w1">Week 1: 9/4/16</a></h2>
-			<br/>
+			<br>
 			<p>During our first week, I mostly worked on administrative tasks to get our project going. I modified the website code from the 2015-2016 Simmons CREU group to fit our needs and project. I gave Emily and Sara a quick tutorial on how to make their own changes so they can upload their own weekly blogs and contribute to team blogs as needed. I also submitted paperwork to receive payment for my work.
 			</p>
 
 			<p>Additionally, I refreshed my memory on the Intonation and Evidence description. I downloaded <a href="http://www.fon.hum.uva.nl/praat/">Praat</a>, software we will use through the course of our research to record, markup, analyze speech. I familiarized myself with <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-911-transcribing-prosodic-structure-of-spoken-utterances-with-tobi-january-iap-2006/">ToBI</a>, the speech markup tutorial we will be using, as well, and begun to explore <a href="http://www.cstr.ed.ac.uk/projects/festival/">Festival</a> speech synthesis.
 			</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w2" id="w2">Week 2: 9/11/16</a></h2>
-			<br/>
+			<br>
 			<p>I began the <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-911-transcribing-prosodic-structure-of-spoken-utterances-with-tobi-january-iap-2006/">ToBI tutorial</a>, which will be used to mark-up samples of speech. I listened to examples and learned these terms and mark-up rules:
 				<ul>
 					<li>Tones
@@ -115,36 +115,36 @@
 				</ul>
 			</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w3" id="w3">Week 3: 9/18/16</a></h2>
-			<br/>
+			<br>
 			<p>I worked through Chapter 2.4 on ToBI, and I started marking-up a radio news corpus. I realized I needed to do more practice with Praat and speech mark-up, so I tried some exercises on the ToBI tutorial page.</p>
 
 			<p>I also received a file with results from a sample taken of recording of different words, said with various prosodic changes. This file will have a script run on it in the near future to clean it up and see if there's a relationship among various elements.
 			</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w4" id="w4">Week 4: 9/25/16</a></h2>
-			<br/>
+			<br>
 			<p>I continued work on the ToBI tutorial and revisited marking-up an FM radio news paragraph reading to practice annotating. I paid close attention to concepts and examples that didn't make sense to me to get clarification from my team and advisor.
 			</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w5" id="w5">Week 5: 10/2/16</a></h2>
-			<br/>
+			<br>
 			<p>I finished marking-up the FM radio news piece. After discussing it with my team, I realized I did about half of it correctly, and now I have more clarification on ToBI annotation rules to go back and clean-up my work.
 			</p>
 
 			<p>It is a challenge for me to annotate recordings. When I do the exercises on the ToBI tutorial, I know what specific boundary tones and pitch accents to look for, but when I'm working on a mixed piece, I can only rely on what I've learned in each chapter and try to identify exactly what I'm hearing without the guidance of a specific chapter topic.
 			</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w6" id="w6">Week 6: 10/9/16</a></h2>
-			<br/>
+			<br>
 			<p>I started writing a script with Python to parse a .TextGrid file into a .CSV.</p>
 
 			<p>.TextGrid is the text file behind the annotations we make on sound files in Praat. To compare each team member's annotations, we have to put it into a spreadsheet, but there is no easy way to do it. I wrote a program which reads one specified .TextGrid and successfully puts it in a spreadsheet.</p>
@@ -152,10 +152,10 @@
 			<p>Some challenges I had this week included copying information from a text file efficiently; handling cases where one word has at least one pitch accent and at least one boundary tone; and the usual bugs we run into while programming.</p>
 
 			<p>I still have to test my code on my teammates' .TextGrids to make sure it works for their annotations as well as mine, and I have to modify the code to create a new column for each person's mark-ups for easy comparison.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w7" id="w7">Week 7: 10/16/16</a></h2>
-			<br/>
+			<br>
 			<p>The Python program I finished last week worked on Sara's and Emily's .TextGrids, so I expanded the code to take at least one argument (file name for a .TextGrid) and parse each file into a cohesive spreadsheet. The programs and descriptions can be found on my GitHub in my <a href="https://github.com/kgbercan/IAI-Scripts">IAI-Scripts repository</a>.</p>
 
 			<p>To take arguments, I use <span class="code">from sys import argv</span>. For regular expressions <span class="code">import re</span>, and to write .CSV files <span class="code">import csv</span>.</p>
@@ -170,10 +170,10 @@
 
 			<p>Remaining possible improvements include making <span class="code">lineUpTiers(tier,xmax)</span> a part of <span class="code">TextGrid</span> and adding functionality to pass in a folder in addition to an individual file.</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w8" id="w">Week 8: 10/23/16</a></h2>
-			<br/>
+			<br>
 			<p>I focused on writing a script that calculates how many agreeing labels each labeler has on each word.</p>
 
 			<p>The program takes one argument, a .csv made using the script I wrote last week called tgToCsv_v2.py. It walks through that file, calculating how many labelers there are based on the length of the spreadsheet, and it makes a copy of each person's tones column to compare.</p>
@@ -186,31 +186,31 @@
 
 			<p>More usage information and examples can be found on my <a href="https://github.com/kgbercan/IAI-Scripts">GitHub</a>.</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w9" id="w9">Week 9: 10/30/16</a></h2>
-			<br/>
+			<br>
 			<p>I am shifting my focus to Festival, a speech synthesis system we hope to use to manipulate sound files. With Festival, our main goal is to adjust pitch accents on sound files to see if certain changes change the meaning of the phrases for participants.</p>
 
 			<p>This week, I tried to get started with Festival on my own machine to set up an environment where we could manipulate our sound files. The manual on Festival's website seems to be out of date so I was unable to install it, so I will continue to look for a solution next week.</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w10" id="w10">Week 10: 11/6/16</a></h2>
-			<br/>
+			<br>
 			<p>I am very close to installing Festival, having found some forums that pointed me in the right direction. I am writing down my steps as I go for Festival-hopefuls in the future, but since I have not successfully installed it yet, I will post it next week.</p>
 
 			<p>I follow the Festival INSTALL files and the manual from the Festival website, but since those are out of date and convoluted for my purposes, it's been helpful to google my errors and see how others have been able to solve the same issues.</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w11" id="w11">Week 11: 11/13/16</a></h2>
-			<br/>
+			<br>
 			<p>I looked for more solutions to install Fesitval, and I think I need to change my PATH in order to make it work. One of my classmates accidentally deleted her PATH variable trying to update it once, so I am seeking help from a professor in my department before moving forward.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w12" id="w12">Week 12: 11/20/16</a></h2>
-			<br/>
+			<br>
 			<p>I finally was able to install Fesitval! Here are the steps:</p>
 			<p>
 				<ol>
@@ -274,81 +274,81 @@
 				</ol>
 			</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w13" id="w13">Week 13: 11/27/16</a></h2>
-			<br/>
+			<br>
 			<p>I continued looking through the <a href="http://festvox.org/docs/manual-2.4.0/festival_7.html#Simple-command-driven-session">Festival manual</a> to start learning how to use it for speech synthesis. I installed another voice package because Kall was a bit too primitive and didn't sound human enough. Even with the newer package I chose (they're all detailed in the manual), the voice is not human enough and may not be suitable for our study.</p>
 
 			<p>Over the next few weeks and over winter break I will work the team to make a decision about which system, Festival or Praat, we should use to synthesize speech/prosody.</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w14" id="w14">Week 14: 12/4/16</a></h2>
-			<br/>
+			<br>
 			<p>This was our last week before finals and winter break. I will focus on trying to get good speech synthesis from Festival and determine if we need to use Praat for speech manipulation instead.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w15" id="w15">Week 15: 12/11/16</a></h2>
-			<br/>
+			<br>
 			<p>This is finals week! I had to take time off to focus on exams.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w16" id="w16">Week 16: 12/18/16</a></h2>
-			<br/>
+			<br>
 			<p>Winter break!</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w17" id="w17">Week 17: 12/25/16</a></h2>
-			<br/>
+			<br>
 			<p>Merry Christmas and Happy Hanukkah!</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w18" id="w18">Week 18: 1/1/17</a></h2>
-			<br/>
+			<br>
 			<p>Happy New Year!</p>
-			<br/>
+			<br>
 
 
 			<h2><a class="unformlink" name="w19" id="w19">Week 19: 1/8/17</a></h2>
-			<br/>
+			<br>
 			<p>Still on break.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w20" id="w20">Week 20: 1/15/17</a></h2>
-			<br/>
+			<br>
 			<p>Back on campus this week. We prepped for experiments for next week.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w21" id="w21">Week 21: 1/22/17</a></h2>
-			<br/>
+			<br>
 			<p>We ran experiments this week. The process went very smoothly and we are excited to start looking at data. We still need to run more participants next week.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w22" id="w22">Week 22: 1/29/17</a></h2>
-			<br/>
+			<br>
 			<p>We continued to run experiments.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w23" id="w23">Week 23: 2/5/17</a></h2>
-			<br/>
+			<br>
 			<p>This week I started cleaning up our data. I took the responsibility of chopping up the sound files for participants who were shown the experiment slides in order A. Because we recorded each subject's responses to the 36 stimuli in 3 distinct sound files, we have to go through each file and save the speech we need for our research. Each slide get its own file with a file name that specifies the scenario, how much the "listener" knows in that scenario, what number participant it is, what slide number it is, and what slide order it is. Then, we have to listen to each file again and save a corresponding .txt file with the text of their speech, noting if there were any unexpected pauses, stutters, etc...</p>
 
 			<p>I also inherited from Nanette a .praat script which ceates a pitch map for all the .wav and .TextGrid files in a folder. I looked through that to see what it did but will not run it or edit it until I'm done clenaing up the experiment sound files.</p>
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w24" id="w24">Week 24: 2/12/17</a></h2>
-			<br/>
+			<br>
 			<p>I finished chopping up the experiment sound files and was able to run the .praat script from last week. It's contents are on my <a href="https://github.com/kgbercan/IAI-Scripts/blob/master/tcogSemiTones.praat">GitHub</a>. In the coming weeks, I will return to this to adapt it to fit our .TextGrid files to help with annotating.</p>
 
 			<p>This week I also looked at the <a href="https://github.com/prosodylab/Prosodylab-Aligner">Prosodylab-Aligner</a>, software which lines-up a file of text with the words spoken in a .wav file and creates a corresponding .TextGrid. Basically, you supply the sound file and the words which were said, and the aligner marks the time where the word starts and ends along with the text of the word in Praat. I attempted to install it on my machine, but I'm not sure if I am mising a necessary component (having a problem with Xcode developer tools which I can't find a solution for). I am able to use the Prosodylab-Aligner, so I think it will work once I figure out the correct way to implement it. The tutorials available online may be outdated, so I am going to reach out to ZL, a student who works for Nanette's colleague Byron, and ask him about his experience using it. Hopefully, he can help me solve my problems.</p>
 
 			<p>Citation for the Prosodylab-Aligner: Gorman, Kyle, Jonathan Howell and Michael Wagner. 2011. Prosodylab-Aligner: A Tool for Forced Alignment of Laboratory Speech. Canadian Acoustics. 39.3. 192–193.</p>
 
-			<br/>
+			<br>
 
 			<h2><a class="unformlink" name="w25" id="w25">Week 25: 2/19/17</a></h2>
-			<br/>
+			<br>
 			<p>This week I attempted to fix my problem installing Prosodylab-Aligner. As mentioned last week, I was getting an error about a missing symbol tied to an outdated version of xcode, the Apple IDE. I don't know what a symbol is and I don't know why I needed that specific "symbol" to carry out my installation.</p>
 
 			<p>I did the only thing I know how to do--I copy and pasted the error message into Google, and I found that many people who got the error were trying to install Ruby. An example is <a href="https://github.com/rvm/rvm/issues/3744">this thread</a>. The fix for these developers was simply to update "developer tools" on xcode, but my version claimed to be updated. After trying to update xcode and then uninstall and re-install it countless times, I decided to try to download Ruby and see if I could find the problem there.</p>
@@ -361,11 +361,10 @@
 
 			<p>Since that multi-hour process, I haven't made more progress on the installation.</p>
 
-			<br/>
+			<br>
 
-<!-- -->
 			<h2><a class="unformlink" name="w26" id="w26">Week 26: 2/26/17</a></h2>
-			<br/>
+			<br>
 			<p>At last, my installation of Prosodylab-Aligner works! I struggled with it a bit more until I took a look at a file in its directory called "requirements.txt." I double checked to make sure I had what it required and realized I didn't have numpy. <a href="https://penandpants.com/2012/02/24/install-python/">This link</a> was helpful for installing the packages I needed. Then I went back and tried Prosodylab-Aligner again.</p>
 
 			<p>The way to use it once you've installed it, <span class="code">cd</span> into its directory. Then, you can type something like <span class="code">python3 -m aligner -a /Users/Karina/Documents/CREU/Spring2017_recordings/test</span> where /Users/Karina/Documents/CREU/Spring2017_recordings/test is the directory of your own files to be aligned, including the .wav file and the .lab file, which is just a text file (in all caps) of the words said.</p>
@@ -373,10 +372,34 @@
 			<p>If you get something about a file named OOV.txt being created, that just means the words you used in your .lab file don't exist in Prosodylab-aligner's dictionary. This is what happened to me. I actually think that was the only problem, and that I suffered with all the rest I wrote about because I didn't really look into that. Come to find out, your .lab file needs to be in all uppercase, and even contractions (like "it's") can't be used.</p>
 
 			<p>In any case, it works! See here: <img src="images/blog/prosodylab.png" alt="Screenshot of TextGrid created by Prosodylab-Aligner" style="width:900px;"></p>
-			<br/>
-<!-- -->
+
+			<br>
+
+			<h2><a class="unformlink" name="w27" id="w27">Week 27: 3/5/17</a></h2>
+			<br>
+			<p>We were on spring break this week!</p>
+			<p>We found out there is a more recent and updated aligner than what I installed last week, so when I get back from break, I will install that, the <a href="http://montreal-forced-aligner.readthedocs.io/en/stable/#">Montreal Forced Aligner</a>, and use it to apply the transcripts of our subjects' speech to their audio on TextGrids.</p>
+
+			<br>
+
+			<h2><a class="unformlink" name="w28" id="w28">Week 28: 3/12/17</a></h2>
+			<br>
+			<p>Since we were working on labeling this week, I had to install the <a href="http://montreal-forced-aligner.readthedocs.io/en/stable/#">Montreal Forced Aligner (MFA)</a> on my computer to create TextGrids we could label. Refresher: a TextGrid is a view of an audio file, its transcript, and the labels and comments we make on it. It's a file created with the program <a href="http://www.fon.hum.uva.nl/praat/">Praat</a>. Normally, we create a new TextGrid for each audio file and apply the words tier ourselves, marking each word where it begins and ends. </p>
+
+			<p>With the aligner, we create a text file (.lab for MFA) containing the transcript with the same name as its corresponding .wav file and run the aligner on it to create the TextGrid. I put all of the files in one folder to get it all done with one line in the terminal. To actually use the aligner, I changed into the MFA directory, used the command <div style="code">bin/mfa_align</div> with the arguments (1) the folder which had all of the .wav and .lab files and (2) the folder to save a resulting .txt file holding words not found in the dictionary of the aligner.</p>
+			<p><img src="images/blog/mfaCommand.png" alt="Montreal Forced Aligner bin/mfa_align command and output" style="width:900px;"></p>
+
+			<p>The TextGrid that the aligner creates has the right words in the right places and a tier with eahc phoneme placed correctly. When the TextGrid and the sound file are opened in Praat, it looks like this:</p>
+			<p><img src="images/blog/mfaResults.png" alt="Screenshot of Praat--audio file and TextGrid created with the Montreal Forced Aligner" style="width:900px;"></p>
+
+			<p>We have 168 sound files to label, so we hope to have that done by next week so we can compare and discuss our results.</p>
+
+			<br>
+
+
+
 		<a href="#">Back to the top</a>
-		<br/>
+		<br>
 		<div id="nothing" style="clear:both;"></div>
 
 	</div>
@@ -386,7 +409,7 @@
 		<img src="images/logos/nsflogo.jpg" alt="NSF logo"></img>
 		<img src="images/logos/creulogo.png" alt="CREU logo"></img>
 		<img src="images/logos/simmons.png" alt="Simmons College logo"></img>
-		<br/><br/><br/><br/><br/>
+		<br><br><br><br><br>
 	</div>
 
 </body>
